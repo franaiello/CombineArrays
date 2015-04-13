@@ -6,17 +6,6 @@ import java.util.List;
 
 public class CombineArrays {
 
-
-    /**
-     * Method takes two parameters, the first is an integer array to
-     * split apart and the second argument is how many times you want
-     * to split up the array into separate individual arrays
-     *
-     * @param arrays
-     *
-     * Example: array [1,2,3,4,5,6]
-     *          returns [1,2] [3,4] [5,6]
-     */
     public static int[] combineIntegerArrays(int[] ... arrays) {
         List<Integer> list = new ArrayList<Integer>();
 
@@ -42,14 +31,6 @@ public class CombineArrays {
         return array;
     }
 
-    /**
-     * Method takes two parameters, the first is a String array to
-     * split apart and the second argument is how many times you want
-     * to split up the array into separate individual arrays
-     *
-     * @param arrays
-     * @return
-     */
     public static String[] combineStringArrays(String[]... arrays) {
         List<String> list = new ArrayList<String>();
 
