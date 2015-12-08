@@ -2,35 +2,37 @@ package com.aiello.exercise;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class CombineArrays {
 
-    public static int[] combineIntegerArrays(int[] ... arrays) {
+    /**
+     * Method accepts n-number of Integer arrays and combines
+     * each of their values as one array
+     * @param arrays
+     * @return
+     */
+    public static Integer[] combineIntegerArrays(int[] ... arrays) {
         List<Integer> list = new ArrayList<Integer>();
 
+        // Iterate across each array and extract integer values
+        // from within each array
         for (int[] array : arrays) {
             for (int i = 0; i <= array.length - 1; i++) {
                 list.add(array[i]);
             }
         }
 
-        return convertToIntArray(list);
+        return list.toArray(new Integer[list.size()]);
     }
 
-    private static int[] convertToIntArray(List<Integer> list) {
-        int[] array = new int[list.size()];
-
-        int i=0;
-
-        for (Integer value : list) {
-            array[i] = value;
-            i++;
-        }
-
-        return array;
-    }
-
+    /**
+     * Method accepts n-number of String arrays and combines
+     * each of their values as one array
+     * @param arrays
+     * @return
+     */
     public static String[] combineStringArrays(String[]... arrays) {
         List<String> list = new ArrayList<String>();
 
@@ -40,19 +42,6 @@ public class CombineArrays {
             }
         }
 
-        return convertToStringArray(list);
-    }
-
-    private static String[] convertToStringArray(List<String> list) {
-        String[] array = new String[list.size()];
-
-        int i=0;
-
-        for (String value : list) {
-            array[i] = value;
-            i++;
-        }
-
-        return array;
+        return list.toArray(new String[list.size()]);
     }
 }

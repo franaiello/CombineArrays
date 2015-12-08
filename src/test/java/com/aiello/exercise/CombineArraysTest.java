@@ -10,14 +10,14 @@ public class CombineArraysTest {
 
     @Test
     public void combineArraysIntoOne() {
-        int[] array = CombineArrays.combineIntegerArrays(new int[]{1, 2}, new int[]{3, 4}, new int[]{5, 6});
-        assertThat(array).containsExactly(new int[]{1, 2, 3, 4, 5, 6});
+        Integer[] array = CombineArrays.combineIntegerArrays(new int[]{1, 2}, new int[]{3, 4}, new int[]{5, 6});
+        assertThat(array).containsExactly(new Integer[]{1, 2, 3, 4, 5, 6});
     }
 
     @Test
     public void combineUnEvenArraysIntoOne() {
-        int[] array = CombineArrays.combineIntegerArrays(new int[]{1, 2, 3}, new int[]{4}, new int[]{5, 6, 7, 8});
-        assertThat(array).containsExactly(new int[]{1, 2, 3, 4, 5, 6, 7, 8});
+        Integer[] array = CombineArrays.combineIntegerArrays(new int[]{1, 2, 3}, new int[]{4}, new int[]{5, 6, 7, 8});
+        assertThat(array).containsExactly(new Integer[]{1, 2, 3, 4, 5, 6, 7, 8});
     }
 
     @Test
